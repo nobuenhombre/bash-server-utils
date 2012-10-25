@@ -17,4 +17,4 @@ service mysqld start
 service httpd start
 
 echo "Logs clear. HTTPD + MySQL restarted." >> $LOGNAME;
-mail -s "Clear logs report" EMAIL < $LOGNAME
+mail -s "Clear logs report" $EMAIL < $LOGNAME
