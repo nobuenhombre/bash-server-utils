@@ -11,7 +11,7 @@ do
 	fi
 	if [-f "$DIRDBRESTORE/$db.sql"];
 	then
-		mysql --user=$MYSQLUSER --password=MYSQLPASS $db < $DIRDBRESTORE/$db.sql
+		mysql --user=$MYSQLUSER --password="$MYSQLPASS" $db < $DIRDBRESTORE/$db.sql
 		rm "$DIRDBRESTORE/$db.sql"
 	fi	
 done

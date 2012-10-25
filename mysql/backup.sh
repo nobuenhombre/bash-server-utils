@@ -9,7 +9,7 @@ mkdir $DIRLAST
 /home/SCRIPTS/mysql/repair.sh
 for db in ${DBLIST[@]}
 do
-    mysqldump --user=$MYSQLUSER --password=$MYSQLPASS $db > $DIRLAST/$db.sql
+    mysqldump --user=$MYSQLUSER --password="$MYSQLPASS" $db > $DIRLAST/$db.sql
 done
 rm $DIRBACKUPS/backup-last.zip
 7za a -tzip -mx5 $DIRBACKUPS/backup-last.zip $DIRLAST/*.sql
