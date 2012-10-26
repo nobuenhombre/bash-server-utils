@@ -7,21 +7,20 @@ DIRLAST="/home/BACKUPS/DB/$MYDATE"
 
 mkdir $DIRLAST
 /home/SCRIPTS/mysql/repair.sh
+
 for db in ${DBLIST[@]}
 do
     mysqldump --user=$MYSQLUSER --password="$MYSQLPASS" $db > $DIRLAST/$db.sql
 done
+
 rm $DIRBACKUPS/backup-last.zip
 7za a -tzip -mx5 $DIRBACKUPS/backup-last.zip $DIRLAST/*.sql
+
 for db in ${DBLIST[@]}
 do
     rm $DIRLAST/$db.sql
 done
 cp $DIRBACKUPS/backup-last.zip $DIRLAST/backup.zip
-rm $DIRFTP/backup.zip
-cp $DIRBACKUPS/backup-last.zip $DIRFTP/backup.zip
-swapoff -a
-swapon -a
 
 END=$(date +%s)
 DIFF=$(( $END - $START ))

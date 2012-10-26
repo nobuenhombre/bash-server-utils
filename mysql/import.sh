@@ -13,5 +13,5 @@ do
 	then
 		mysql --user=$MYSQLUSER --password="$MYSQLPASS" $db < $DIRDBRESTORE/$db.sql
 		rm "$DIRDBRESTORE/$db.sql"
-	fi	
+	fi
 done
