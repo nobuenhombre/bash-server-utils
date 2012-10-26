@@ -14,8 +14,8 @@ HOME=/
 # *  *  *  *  * user-name command to be executed
 
 03,08,13,18,23,28,33,38,43,48,53,58 * * * * run-parts /etc/cron.5min
-04,19,34,49 * * * * run-parts /etc/cron.quarthour
-05,35 * * * * run-parts /etc/cron.halfhour
+04,19,34,49 * * * * run-parts /etc/cron.hourquart
+05,35 * * * * run-parts /etc/cron.hourhalf
 01 * * * * run-parts /etc/cron.hourly
 02 4 * * * run-parts /etc/cron.daily
 22 4 * * 0 run-parts /etc/cron.weekly
