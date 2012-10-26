@@ -3,15 +3,15 @@ source /home/SCRIPTS/config.cfg
 
 for db in ${DBLIST[@]}
 do
-	if [-f "$DIRDBRESTORE/$db.zip"];
+	if [-f "$DIR_UPLOAD_DB/$db.zip"];
 	then
-		cd $DIRDBRESTORE
+		cd $DIR_UPLOAD_DB
 		unzip $db.zip
-		rm "$DIRDBRESTORE/$db.zip"
+		rm "$DIR_UPLOAD_DB/$db.zip"
 	fi
-	if [-f "$DIRDBRESTORE/$db.sql"];
+	if [-f "$DIR_UPLOAD_DB/$db.sql"];
 	then
-		mysql --user=$MYSQLUSER --password="$MYSQLPASS" $db < $DIRDBRESTORE/$db.sql
-		rm "$DIRDBRESTORE/$db.sql"
+		mysql --user=$MYSQL_USER --password="$MYSQL_PASS" $db < $DIR_UPLOAD_DB/$db.sql
+		rm "$DIR_UPLOAD_DB/$db.sql"
 	fi
 done

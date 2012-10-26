@@ -1,8 +1,8 @@
 #!/bin/bash
 source /home/SCRIPTS/config.cfg
 
-LOGNAME="$DIRLOGS/clear-logs.txt"
-rm $LOGNAME
+LOG="$DIR_LOGS/clear-logs.txt"
+rm $LOG
 
 service httpd stop
 service mysqld stop
@@ -16,5 +16,5 @@ done
 service mysqld start
 service httpd start
 
-echo "Logs clear. HTTPD + MySQL restarted." >> $LOGNAME;
-mail -s "Clear logs report" $EMAIL < $LOGNAME
+echo "Logs clear. HTTPD + MySQL restarted." >> $LOG;
+mail -s "Clear logs report" $EMAIL < $LOG
