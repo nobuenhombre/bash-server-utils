@@ -3,6 +3,10 @@ source /home/SCRIPTS/config.cfg
 
 for db in ${DBLIST[@]}
 do
+	if [ -f "$DIR_UPLOAD/$db.zip" ];
+	then
+		mv "$DIR_UPLOAD/$db.zip" $DIR_UPLOAD_DB
+	fi
 	if [ -f "$DIR_UPLOAD_DB/$db.zip" ];
 	then
 		cd $DIR_UPLOAD_DB
