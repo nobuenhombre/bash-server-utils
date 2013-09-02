@@ -1,0 +1,25 @@
+#!/bin/bash
+mkdir /etc/cron.1min
+mkdir /etc/cron.5min
+mkdir /etc/cron.hourquart
+mkdir /etc/cron.hourhalf
+mkdir /home/BACKUPS
+mkdir /home/BACKUPS/DB
+mkdir /home/BACKUPS/SITE
+mkdir /home/CRC-FAULT
+mkdir /home/INOUT
+mkdir /home/PASSWORDS
+mkdir /home/SCRIPTS
+mkdir /home/SCRIPTS/cron
+mkdir /home/SCRIPTS/httpd
+mkdir /home/SCRIPTS/mysql
+mkdir /home/SCRIPTS/sites
+mkdir /home/SCRIPTS/sync
+mkdir /home/SCRIPTS/system
+mkdir /home/UPLOAD
+mkdir /home/UPLOAD/DB
+mkdir /home/UPLOAD/SAPPHIRE
+mkdir /home/UPLOAD/SITES
+mkdir /home/sites
+mkdir /home/sapphire
+mkdir /home/system-logs
